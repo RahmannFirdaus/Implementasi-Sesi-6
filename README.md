@@ -1,8 +1,7 @@
 # Deforestation Driver Classification
 
 > **Studi Kasus Lengkap**: *Atribusi Pemicu Langsung Deforestasi Tropis Menggunakan Citra Satelit Multi-Sensor (Sentinel-1 & Sentinel-2) dan Machine Learning*
->
-> Berdasarkan metodologi **Dr. Bart Slachter** – Wageningen University (2024)
+
 
 ---
 
@@ -53,67 +52,8 @@ Fire_Natural       ████ 7%
 | `S2_B3_Green` | Sentinel-2 | Reflektansi Band Hijau (0,56 µm) |
 | `S2_B4_Red` | Sentinel-2 | Reflektansi Band Merah (0,665 µm) |
 | `S2_B8_NIR` | Sentinel-2 | Reflektansi Near-Infrared (0,842 µm) |
-| `NDVI` | Turunan S2 | (NIR-Red)/(NIR+Red) — Indeks Kesehatan Vegetasi |
-| `SAR_VH_VV_Ratio` | Turunan S1 | VH − VV (dB) — Indeks Struktur Vegetasi/Kekasaran |
-
----
-
-## 🗂️ Struktur Repositori
-
-```
-deforestation-driver-classification/
-├── data/
-│   └── satellite_deforestation_drivers.csv   # Dataset fitur multi-sensor (dibuat otomatis)
-├── src/
-│   ├── dataset_generator.py                   # Generator dataset sintetis multi-sensor
-│   └── train_model.py                         # Training & evaluasi model + visualisasi
-├── results/
-│   ├── deforestation-confusion-matrix.png     # Confusion Matrix (Random Forest)
-│   ├── deforestation-metrics-comparison.png   # Accuracy vs Macro F1 Score (kedua model)
-│   └── deforestation-feature-importance.png   # Feature Importance (Random Forest)
-├── requirements.txt                           # Dependensi library Python
-└── README.md                                  # Dokumentasi proyek ini
-```
-
----
-
-## ⚙️ Cara Menjalankan
-
-### 1. Kloning Repositori
-
-```bash
-git clone https://github.com/<username>/deforestation-driver-classification.git
-cd deforestation-driver-classification
-```
-
-### 2. Install Dependensi
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Generate Dataset
-
-```bash
-python src/dataset_generator.py
-```
-
-Output: `data/satellite_deforestation_drivers.csv` (3.000 sampel)
-
-### 4. Jalankan Training & Evaluasi
-
-```bash
-python src/train_model.py
-```
-
-Output di terminal:
-- Laporan klasifikasi per kelas (Precision, Recall, F1)
-- Perbandingan Accuracy & Macro F1 kedua model
-
-Output di folder `results/`:
-- `deforestation-confusion-matrix.png`
-- `deforestation-metrics-comparison.png`
-- `deforestation-feature-importance.png`
+| `NDVI` | Turunan S2 | (NIR-Red)/(NIR+Red) - Indeks Kesehatan Vegetasi |
+| `SAR_VH_VV_Ratio` | Turunan S1 | VH - VV (dB) - Indeks Struktur Vegetasi/Kekasaran |
 
 ---
 
@@ -145,8 +85,4 @@ Output di folder `results/`:
 - Sentinel Hub. (2024). *Sentinel-1 SAR GRD & Sentinel-2 L2A Documentation*. ESA Copernicus.
 - Scikit-learn Developers. (2024). *sklearn.metrics: Classification metrics*. scikit-learn.org.
 
----
 
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan akademik (Studi Kasus Mata Kuliah). Dataset bersifat sintetis dan tidak merepresentasikan data lapangan aktual.
