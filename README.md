@@ -81,7 +81,7 @@ Fire_Natural       ████ 7%
 ## 🔬 Referensi
 
 - Slachter, B. (2024). *Identifying Direct Drivers of Tropical Deforestation Using Multi-Sensor Satellite Imagery & Machine Learning*. Wageningen University & Research.
-- Hansen, M.C., et al. (2013). High-Resolution Global Maps of 21st-Century Forest Cover Change. *Science*, 342(6160), 850–853.
+- Hansen, M.C., et al. (2013). High-Resolution Global Maps of 21st-Century Forest Cover Change. *Science*, 342(6160), 850-853.
 - Sentinel Hub. (2024). *Sentinel-1 SAR GRD & Sentinel-2 L2A Documentation*. ESA Copernicus.
 - Scikit-learn Developers. (2024). *sklearn.metrics: Classification metrics*. scikit-learn.org.
 
